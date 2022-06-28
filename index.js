@@ -8,7 +8,7 @@ Car.prototype.accelerate = function() {
     const speedUp = () => {
         const newSpeed = speed += 10
         this.speed = newSpeed
-        console.log(`${newSpeed}KM/H`)
+        console.log(`Car ${this.make} goes with speed ${newSpeed}KM/H`)
     }
     return speedUp
 }
@@ -18,7 +18,7 @@ Car.prototype.brake = function () {
     const speedDown = () => {
         const newSpeed = speed -= 5;
         this.speed = newSpeed;
-        console.log(`${newSpeed}KM/H`)
+        console.log(`Car ${this.make} goes with speed ${newSpeed}KM/H`)
     }
     return speedDown
 }
