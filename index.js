@@ -4,45 +4,30 @@ function Car(make, speed) {
 }
 
 Car.prototype.accelerate = function() {
-    let speed = this.speed
-    const speedUp = () => {
-        const newSpeed = speed += 10
-        this.speed = newSpeed
-        console.log(`Car ${this.make} goes with speed ${newSpeed}KM/H`)
-    }
-    return speedUp
+    console.log(`Car ${this.make} goes with speed ${this.speed += 10}KM/H`)
 }
 
 Car.prototype.brake = function () {
-    let speed = this.speed;
-    const speedDown = () => {
-        const newSpeed = speed -= 5;
-        this.speed = newSpeed;
-        console.log(`Car ${this.make} goes with speed ${newSpeed}KM/H`)
-    }
-    return speedDown
+   console.log(`Car ${this.make} goes with speed ${this.speed -= 5}KM/H`)
 }
 // Car 1
-const carBmw = new Car("BMW", 120)
-console.log(carBmw)
-const speedUpCar1 = carBmw.accelerate() // Function speedUp: accelerate after every times call function
-speedUpCar1()
-speedUpCar1()
-speedUpCar1()
-const speedDownCar1 = carBmw.brake() // Function speedDown: brake after every times call function
-speedDownCar1()
-speedDownCar1()
-speedDownCar1()
-speedDownCar1()
+const car1 = new Car("BMW", 120)
+console.log(car1)
+car1.accelerate()
+car1.accelerate()
+car1.accelerate()
+car1.brake()
+car1.brake()
+car1.brake()
+car1.brake()
+console.log("===============================")
 // Car 2
-console.log("===============================================================")
-const carMer = new Car("Mercedes", 95)
-console.log(carMer)
-const speedUpCar2 = carMer.accelerate()
-speedUpCar2()
-speedUpCar2()
-const speedDownCar2 = carMer.brake()
-speedDownCar2()
-speedDownCar2()
-speedDownCar2()
-
+const car2 = new Car("Mercedes", 90)
+console.log(car2)
+car2.accelerate()
+car2.accelerate()
+car2.accelerate()
+car2.brake()
+car2.brake()
+car2.brake()
+car2.brake()
